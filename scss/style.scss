@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Hiragino Mincho Pro';
+    src: url(../css/hiragino-mincho-pro-w6.otf) format("truetype");
+    font-style: normal;
+}
+
+@import "container.scss";
+body {
+    color: #3F3F3F;
+    font-family: 'Hiragino Mincho Pro';
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #3F3F3F;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    margin: 0 0 5px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    z-index: 1;
+    &::before {
+        color: #363636;
+        content: attr(data-text);
+        height: 100%;
+        left: -0;
+        opacity: 0.83;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 122.5%;
+    margin: 0 0 15px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    &+h3 {
+        margin-top: 10px;
+    }
+}
+
+p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    &+p {
+        margin-top: 10px;
+    }
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+header {
+    background: #EE769A;
+    height: 100px;
+    position: relative;
+    .menu-burger {
+        background: #EE769A;
+        border-radius: 6px;
+        height: 5px;
+        position: absolute;
+        left: 13px;
+        top: 130%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+        width: 46px;
+        z-index: 3;
+        &::before,
+        &::after {
+            background: #EE769A;
+            border-radius: 6px;
+            content: '';
+            height: 5px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            transition: all 0.3s ease-in-out;
+            width: 46px;
+        }
+        &::before {
+            top: calc(50% - 10px);
+        }
+        &:after {
+            top: calc(50% + 10px);
+        }
+    }
+    .menu {
+        background: #fff;
+        display: none;
+        height: 100vh;
+        margin: 0 -12px;
+        padding: 30px 0 0 30%;
+        position: absolute;
+        top: 100px;
+        width: 100vw;
+        z-index: 2;
+        li {
+            a {
+                color: #EE769A;
+            }
+            &+li {
+                margin-top: 10px;
+            }
+            ul {
+                margin-left: 30px;
+                li+li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .landing-logo {
+        display: block;
+        margin: 0 auto;
+        padding: 24px 0;
+        width: max-content;
+    }
+}
+
+.overflow {
+    overflow-y: hidden;
+    .header {
+        opacity: 1;
+        .menu-burger {
+            background: none;
+            border-radius: 6px;
+            z-index: 3;
+            &::before {
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+            }
+            &:after {
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            }
+        }
+        &-block {
+            display: none;
+        }
+    }
+}
+
+main {
+    img {
+        width: 100vw;
+        margin: 0 -12px;
+    }
+    .welcome {
+        position: relative;
+        .visual {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            img {
+                margin: 0;
+            }
+        }
+        &-text {
+            margin-top: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .landing-btn {
+            background: #FF9FB8;
+            border-radius: 30px;
+            box-shadow: inset -20px -20px 80px #BB6780, inset 20px 20px 80px #BB6780;
+            color: #3F3F3F;
+            display: block;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 48px;
+            margin: 20px 0 0;
+            padding: 15px;
+            text-align: center;
+            &:hover {
+                background: #df6a89;
+            }
+            &:active {
+                background: #ab5c71;
+            }
+        }
+        &::before {
+            background: url(../img/pink-fangs.png) no-repeat;
+            background-size: contain;
+            content: '';
+            height: 80%;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 80%;
+            z-index: 0;
+        }
+    }
+    .firstProduct {
+        margin: 33px 0 59px;
+        &-text {
+            margin: 10px 0 0;
+        }
+    }
+    .secondProduct {
+        &-text {
+            margin: 10px 0 0;
+        }
+    }
+    .form {
+        background: #FF9FB8;
+        border-radius: 56.2478px;
+        box-shadow: inset -20px -20px 50px #BB6780, inset 20px 20px 50px #BB6780;
+        margin: 24px -12px 100px;
+        padding: 27px 11px 67px;
+        position: relative;
+        text-align: center;
+        input {
+            border: none;
+            box-shadow: inset 3.3087px 3.3087px 3.3087px rgba(0, 0, 0, 0.25);
+            height: 45px;
+            padding: 10px;
+            margin: 0 auto;
+            width: 245px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        &-btn {
+            background: linear-gradient(to right, #FF9FB8 0%, #000 6%, #000 94%, #FF9FB8 100%);
+            border-radius: 57.9022px;
+            box-shadow: 3.3086955547332764px 3.3086955547332764px 3.3086955547332764px 0px #00000040 inset;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            margin: 45px 0 0;
+            text-transform: uppercase;
+            display: block;
+            padding: 20px;
+            height: 78px;
+            &:hover {
+                background: linear-gradient(to right, #FF9FB8 0%, #1a1818 6%, #1a1818 94%, #FF9FB8 100%);
+            }
+        }
+        &::after {
+            background: url(../img/slim2-2x.png) no-repeat;
+            background-size: contain;
+            bottom: -88%;
+            content: '';
+            height: 100%;
+            max-width: 90px;
+            position: absolute;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .other {
+        position: relative;
+    }
+    .discount {
+        background: #491826;
+        box-shadow: 2.75402px 5.04903px 8.26205px rgba(0, 0, 0, 0.25);
+        border-radius: 34.8842px;
+        padding: 16px 32px;
+        position: absolute;
+        right: 17%;
+        top: 59%;
+        transform: rotate(10.86deg);
+        P {
+            color: #FFFFFF;
+            font-size: 22.0321px;
+            font-weight: 600;
+            line-height: 33px;
+            text-align: center;
+        }
+    }
+    .timer {
+        width: 85%;
+        h2 {
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+        .timerDo {
+            color: #484848;
+            font-family: 'Times New Roman';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        .timer1 {
+            align-items: center;
+            color: #FF77A0;
+            display: flex;
+            font-family: 'Times New Roman';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 28px;
+            .timer-section {
+                align-items: center;
+                display: flex;
+            }
+        }
+    }
+    .fixed-block {
+        background: #EE769A;
+        bottom: 0;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        padding: 8px 17px;
+        position: fixed;
+        width: 100vw;
+        z-index: 2;
+        h2 {
+            line-height: 125%;
+            color: #D20F26;
+            font-size: 16px;
+            margin: 0;
+        }
+        p {
+            color: #FFFFFF;
+            font-size: 18px;
+            line-height: 110%;
+        }
+        img {
+            display: none;
+        }
+        &__btn {
+            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 100%);
+            box-shadow: inset 3.3087px 3.3087px 3.3087px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            color: #fff;
+            display: block;
+            margin: 8px 0 0;
+            padding: 6px;
+            text-align: center;
+        }
+        &__close {
+            cursor: pointer;
+            position: absolute;
+            right: 17px;
+            top: 8px;
+            &::before,
+            &::after {
+                background: #fff;
+                content: "";
+                height: 3px;
+                right: 0;
+                position: absolute;
+                top: 8px;
+                width: 15px;
+            }
+            &::before {
+                transform: rotate(-45deg);
+            }
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 50px 0 150px;
+    text-align: center;
+    &-logo {
+        width: 205px;
+    }
+    .social {
+        display: flex;
+        margin: 45px auto;
+        justify-content: center;
+        a {
+            img {
+                width: 16px;
+            }
+            &+a {
+                margin-left: 20px;
+            }
+        }
+    }
+    .last-blocks {
+        color: #EE769A;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 15px;
+        .footer-menu {
+            margin: 25px 0;
+        }
+        a {
+            color: #EE769A;
+            &::before {
+                content: '|';
+                position: absolute;
+                left: -10px;
+            }
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+            &+a {
+                margin-left: 15px;
+                position: relative;
+            }
+        }
+        .fm-block+.fm-block {
+            margin-top: 5px;
+        }
+    }
+}
+
+@import "media.scss"
