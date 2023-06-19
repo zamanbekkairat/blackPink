@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackpink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <span class="menu-burger"></span>
+            <ul class="menu">
+                <li>
+                    APPAREL
+                    <ul>
+                        <li>
+                            <a href="">t-shirts</a>
+                        </li>
+                        <li>
+                            <a href="">shirts</a>
+                        </li>
+                        <li>
+                            <a href="">switpants</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    MUSIC
+                    <ul>
+                        <li>
+                            <a href="">Pink Venom</a>
+                        </li>
+                        <li>
+                            <a href="">Ice Cream</a>
+                        </li>
+                        <li>
+                            <a href="">Typa Girl</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    COLLECTIONS
+                    <ul>
+                        <li>
+                            <a href="">merch</a>
+                        </li>
+                        <li>
+                            <a href="">picture</a>
+                        </li>
+                        <li>
+                            <a href="">album</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>ACCESSORIES</li>
+            </ul>
+
+            <a href="/" class="landing-logo">
+                <img src="img/logo.png" srcset="img/logo-2x.png 2x" alt="logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="out-of-header">
+        <div class="container">
+            <section class="welcome">
+                <div class="visual">
+                    <img src="img/lisa.png" srcset="img/lisa-2x.png 2x" alt="">
+                </div>
+
+                <div class="welcome-text">
+                    <h2>Borem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                    <p>Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+                    <a href="#" class="landing-btn">Horem</a>
+                </div>
+            </section>
+
+            <section class="firstProduct">
+                <div class="firstProduct-img">
+                    <img src="IMG/firstProduct.png" srcset="img/firstProduct-2x.png 2x" alt="">
+                </div>
+
+                <div class="firstProduct-text">
+                    <h2>Borem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                    <p>Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <p>Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </div>
+            </section>
+
+            <section class="secondProduct">
+                <div class="secondProduct-img">
+                    <img src="img/secondProduct.png" srcset="img/secondProduct-2x.png 2x" alt="">
+                </div>
+
+                <div class="secondProduct-text">
+                    <h2>Borem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                    <h3>Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h3>
+                    <h3>Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h3>
+                </div>
+            </section>
+
+            <section class="other">
+                <div class="form">
+                    <h1 data-text="Porem ipsum">Porem ipsum</h1>
+                    <form method="post" action="/ajax/feedback" data-pjax>
+                        <h3>Name</h3>
+                        <input type="text">
+                        <h3>Phone</h3>
+                        <input type="tel" class="phone">
+
+                        <a href="javascipt:void(0)" type="button" onclick="sendEmail()" name="submit_btn" class="form-btn">Porem ipsum</a>
+                    </form>
+                </div>
+
+                <div class="discount">
+                    <p>Discount!
+                        <br>₱ 3.980
+                        <br>₱ 1.990</p>
+                </div>
+
+                <div class="timer">
+                    <h2>Скидка действительна до&nbsp;24.06.2023</h2>
+                    <div class="timer__wrapper">
+                        <div class="timerDo">Закончится через:</div>
+
+                        <div id="timerEnd" class="timer1">
+                            <div class="timer-section">
+                                <div class="days-block">
+                                    <span class="days num">00</span>
+                                </div>
+                                <span class="text_num">:</span>
+                            </div>
+
+                            <div class="timer-section">
+                                <div class="hours-block">
+                                    <span class="hours num">00</span>
+                                </div>
+                                <span class="text_num">:</span>
+                            </div>
+
+                            <div class="timer-section">
+                                <div class="minutes-block">
+                                    <span class="minutes649 num">00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="fixed-block">
+            <div class="fixed-block__close">
+                <span></span>
+            </div>
+
+            <div class="fixed-block__text">
+                <h2>DISCOUNT</h2>
+                <p>For the low price of ₱1.990, you&nbsp;can&nbsp;try&nbsp;it&nbsp;out!</p>
+            </div>
+            <img src="img/fixed-img.png" srcset="img/fixed-img-2x.png 2x" alt="">
+            <a href="" class="fixed-block__btn">ORDER NOW</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img class="footer-logo" src="img/footer-logo.png" srcset="img/footer-logo-2x.png 2x" alt="">
+
+            <div class="social">
+                <a href="" target="_blank">
+                    <img src="img/facebook.svg" alt="facebook">
+                </a>
+                <a href="" target="_blank">
+                    <img src="img/twitter.svg" alt="twitter">
+                </a>
+                <a href="" target="_blank">
+                    <img src="img/insta.svg" alt="instagram">
+                </a>
+                <a href="" target="_blank">
+                    <img src="img/youtube.svg" alt="youtube">
+                </a>
+                <a href="" target="_blank">
+                    <img src="img/apple.svg" alt="apple">
+                </a>
+                <a href="" target="_blank">
+                    <img src="img/spotify.svg" alt="spotify">
+                </a>
+            </div>
+
+            <div class="last-blocks">
+                <p>Ⓒ 2023 BLACKPINK | SHOP. All Rights Reserved.</p>
+
+                <div class="footer-menu">
+                    <div class="fm-block">
+                        <a href="">Help</a>
+                        <a href="">Terms</a>
+                        <a href="">Privacy</a>
+                    </div>
+
+                    <div class="fm-block">
+                        <a href="">Do&nbsp;Not&nbsp;Sell&nbsp;My&nbsp;Personal&nbsp;Information</a>
+                        <a href="">Cookie Choices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
